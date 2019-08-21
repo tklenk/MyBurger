@@ -5,6 +5,7 @@
     font-weight: bold;
     text-align: center;
     font-size: 1.2rem;
+    overflow: scroll;
 }
 
 @media only screen and (max-width: 768px) {
