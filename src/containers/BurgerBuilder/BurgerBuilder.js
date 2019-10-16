@@ -100,6 +100,7 @@ class BurgerBuilder extends Component {
             customer: {
                 name: 'Lila Nowak',
                 address: {
+                    street: 'Teststreet 1',
                     zipCode: '90898',
                     country: 'Poland'
                 },
@@ -137,7 +138,7 @@ class BurgerBuilder extends Component {
                         ingredientRemoved={this.removeIngredientHandler}
                         disabled={disabledInfo}
                         price={this.state.totalPrice}
-                        purchaseable={this.state.purchaseable}
+                        purchasable={this.state.purchasable}
                         ordered={this.purchaseHandler}
                     />
                 </Aux>
@@ -148,9 +149,7 @@ class BurgerBuilder extends Component {
                 purchaseContinued={this.purchaseContinueHandler}
                 price={this.state.totalPrice} />
         }
-        if (this.state.loading) {
-                orderSummary = <Spinner />
-        }
+       
         if ( this.state.loading ) {
             orderSummary = <Spinner />;
         }
