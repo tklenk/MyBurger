@@ -83,7 +83,7 @@ class ContactData extends Component {
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
                 },
-                value: '',
+                value: '', //string, and we have select option. better to leave default value = 'fastest'
                 valid: true,
                 validation: {}
             },
