@@ -10,19 +10,22 @@ const input = (props) => {
             inputElement = <input 
                 className="InputElement" 
                 {...props.elementConfig} 
-                value={props.value} />
+                value={props.value}
+                onChange={props.changed} />
             break
         case ('textarea'):
             inputElement = <textarea
                 className="InputElement" 
                 {...props.elementConfig} 
-                value={props.value} />
+                value={props.value}
+                onChange={props.changed} />
             break
         case ('select'):
             inputElement = (
                 <select 
                     className="InputElement"  
-                    value={props.value}>
+                    value={props.value}
+                    onChange={props.changed}>
                     {props.elementConfig.options.map(option => (
                         <option key={option.value} value={option.value}>
                             {option.displayValue}
